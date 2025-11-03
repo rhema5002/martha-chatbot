@@ -1,43 +1,55 @@
-# Array Flatten
+# es-errors <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-[![NPM version][npm-image]][npm-url]
-[![NPM downloads][downloads-image]][downloads-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![github actions][actions-image]][actions-url]
+[![coverage][codecov-image]][codecov-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
-> Flatten an array of nested arrays into a single flat array. Accepts an optional depth.
+[![npm badge][npm-badge-png]][package-url]
 
-## Installation
+A simple cache for a few of the JS Error constructors.
 
+## Example
+
+```js
+const assert = require('assert');
+
+const Base = require('es-errors');
+const Eval = require('es-errors/eval');
+const Range = require('es-errors/range');
+const Ref = require('es-errors/ref');
+const Syntax = require('es-errors/syntax');
+const Type = require('es-errors/type');
+const URI = require('es-errors/uri');
+
+assert.equal(Base, Error);
+assert.equal(Eval, EvalError);
+assert.equal(Range, RangeError);
+assert.equal(Ref, ReferenceError);
+assert.equal(Syntax, SyntaxError);
+assert.equal(Type, TypeError);
+assert.equal(URI, URIError);
 ```
-npm install array-flatten --save
-```
 
-## Usage
+## Tests
+Simply clone the repo, `npm install`, and run `npm test`
 
-```javascript
-var flatten = require('array-flatten')
+## Security
 
-flatten([1, [2, [3, [4, [5], 6], 7], 8], 9])
-//=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Please email [@ljharb](https://github.com/ljharb) or see https://tidelift.com/security if you have a potential security vulnerability to report.
 
-flatten([1, [2, [3, [4, [5], 6], 7], 8], 9], 2)
-//=> [1, 2, 3, [4, [5], 6], 7, 8, 9]
-
-(function () {
-  flatten(arguments) //=> [1, 2, 3]
-})(1, [2, 3])
-```
-
-## License
-
-MIT
-
-[npm-image]: https://img.shields.io/npm/v/array-flatten.svg?style=flat
-[npm-url]: https://npmjs.org/package/array-flatten
-[downloads-image]: https://img.shields.io/npm/dm/array-flatten.svg?style=flat
-[downloads-url]: https://npmjs.org/package/array-flatten
-[travis-image]: https://img.shields.io/travis/blakeembrey/array-flatten.svg?style=flat
-[travis-url]: https://travis-ci.org/blakeembrey/array-flatten
-[coveralls-image]: https://img.shields.io/coveralls/blakeembrey/array-flatten.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/blakeembrey/array-flatten?branch=master
+[package-url]: https://npmjs.org/package/es-errors
+[npm-version-svg]: https://versionbadg.es/ljharb/es-errors.svg
+[deps-svg]: https://david-dm.org/ljharb/es-errors.svg
+[deps-url]: https://david-dm.org/ljharb/es-errors
+[dev-deps-svg]: https://david-dm.org/ljharb/es-errors/dev-status.svg
+[dev-deps-url]: https://david-dm.org/ljharb/es-errors#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/es-errors.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/es-errors.svg
+[license-url]: LICENSE
+[downloads-image]: https://img.shields.io/npm/dm/es-errors.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=es-errors
+[codecov-image]: https://codecov.io/gh/ljharb/es-errors/branch/main/graphs/badge.svg
+[codecov-url]: https://app.codecov.io/gh/ljharb/es-errors/
+[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/ljharb/es-errors
+[actions-url]: https://github.com/ljharb/es-errors/actions
