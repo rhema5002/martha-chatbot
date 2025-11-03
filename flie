@@ -1,0 +1,10 @@
+MarthaChatbot/
+│
+├── server.js        ← backend server
+├── .env             ← your API key (keep private)
+├── package.json
+│
+└── public/
+    ├── index.html   ← frontend UI
+    ├── style.css
+    └── script.js
