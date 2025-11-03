@@ -1,3 +1,3 @@
-declare const Error: ErrorConstructor;
-
-export = Error;
+export * from "./FormData";
+export * from "./Blob";
+export * from "./File";
