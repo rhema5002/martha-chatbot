@@ -1,0 +1,15 @@
+{
+  "name": "martha-chatbot",
+  "version": "1.0.0",
+  "description": "A modern AI chatbot named Martha built with Node.js, Express, and OpenAI API.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "openai": "^4.104.0"
+  }
+}
