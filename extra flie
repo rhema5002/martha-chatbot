@@ -1,0 +1,26 @@
+martha-chatbot/
+│
+├── index.html              ← main webpage (chat interface)
+├── style.css               ← styling for your chatbot
+├── script.js               ← chatbot functionality / API calls
+│
+├── assets/                 ← store images, icons, or fonts
+│   ├── logo.png
+│   └── background.jpg
+│
+├── .env                    ← (optional) API key if running locally
+├── README.md               ← project description for GitHub
+├── package.json            ← (if you’re using Node.js)
+├── server.js               ← (optional backend if using Express)
+│
+└── render.yaml             ← (optional) for Render deployment setup
+
+
+server.js
+package.json
+render.yaml
+
+index.html
+style.css
+script.js
+assets/
